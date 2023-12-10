@@ -1,0 +1,25 @@
+[package]
+name = "dicom-stack"
+version = "0.1.0"
+edition = "2021"
+description = "A CLI tool for converting between enhanced/legacy dicom(s)"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "dicom_stack"
+path = "src/lib.rs"
+
+[[bin]]
+name = "dicom-stack"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.4.11", features = ["derive"] }
+dicom-core = { version = "0.6.2", path = "../core" }
+dicom-dictionary-std = { version = "0.6.1", path = "../dictionary-std", features=["standard"] }
+dicom-object = { path = "../object" }
+lazy_static = "1.4.0"
+snafu = "0.7.5"
+
+[dev-dependencies]

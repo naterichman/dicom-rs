@@ -17,6 +17,7 @@ members = [
     "parent",
     "parser",
     "pixeldata",
+    "stack",
     "scpproxy",
     "storescp",
     "storescu",

@@ -33,12 +33,18 @@ pub mod data_element;
 
 #[cfg(feature = "sop-class")]
 pub mod sop_class;
+#[cfg(feature = "standard")]
+pub mod standard;
 pub mod tags;
 pub mod uids;
 
 pub use data_element::{StandardDataDictionary, StandardDataDictionaryRegistry};
 #[cfg(feature = "sop-class")]
 pub use sop_class::StandardSopClassDictionary;
+
+//use dicom_object::InMemDicomObject;
+
+//include!(concat!(env!("OUT_DIR"), "/codegen.rs"));
 
 #[cfg(test)]
 mod tests {

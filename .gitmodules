@@ -1,0 +1,3 @@
+[submodule "dictionary-std/dicom-standard"]
+	path = dictionary-std/dicom-standard
+	url = git@github.com:innolitics/dicom-standard.git

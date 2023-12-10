@@ -25,7 +25,14 @@ application-hosting-model = []
 mapping-resource = []
 ldap-oid = []
 synchronization-frame-of-reference = []
+standard = ["dep:serde"]
 
 [dependencies]
 dicom-core = { path = "../core", version = "0.6.2" }
 once_cell = "1.18.0"
+serde = { version = "1.0.193", optional = true, default-features = false, features = ["derive"] }
+serde_cbor = { version = "0.11.2", default-features = false }
+
+[build-dependencies]
+serde_json = "1.0.108"
+serde_cbor = "0.11.2"
